@@ -11,7 +11,7 @@
 
 ## Setup
 - Make sure you have [Python](https://www.python.org/)
-- Create a new app on the [Developer Portal](https://discord.com/developers/applications), optional name the Bot sth. like "Dyno" and give it the correct profile picture and describtion
+- Create a new app on the [Developer Portal](https://discord.com/developers/applications), optional name the Bot sth. like "Dyno" and give it the correct profile picture and description
 - Download repo as a zip-file and save it somewhere
 - Unpack the .zip file
 - Open Cmd and direct yourself into the unpacked folder containing the files
