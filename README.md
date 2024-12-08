@@ -30,11 +30,11 @@
 - Run the bot using `python raider.py` or `python3 raider.py`
 
 ## Use the bot
-- Allow the created app access to your Discord Account
+- Allow the created app access to your Discord Account (Shown in Setup)
 - Follow the instructions in the console window
-- Use /spamraid command in the channel to raid
-![External App Page](readmefiles/ExternalApp.png)
+- Use /spamraid command in the channel to raid or use the external app window
 ![Bot Use Page](readmefiles/BotUse.png)
+![External App Page](readmefiles/ExternalApp.png)
 
 
 ## License
