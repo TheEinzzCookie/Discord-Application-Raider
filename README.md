@@ -14,8 +14,12 @@
 - Create a new app on the [Developer Portal](https://discord.com/developers/applications), optional name the Bot sth. like "Dyno" and give it the correct profile picture and description
 - Example:
 ![Information Page](readmefiles/InformationPage.png)
-![Information Page](readmefiles/InstallationPage.png)
-![Information Page](readmefiles/BotPage.png)
+![Installation Page](readmefiles/InstallationPage.png)
+![Bot Page](readmefiles/BotPage.png)
+![Add Bot Page](readmefiles/AddBot.png)
+![Add to Apps Page](readmefiles/AddToOwnApps.png)
+![Success Page](readmefiles/AddSuccess.png)
+![Check Auth Page](readmefiles/CheckAuth.png)
 
 - Download repo as a zip-file and save it somewhere
 - Unpack the .zip file
@@ -29,6 +33,8 @@
 - Allow the created app access to your Discord Account
 - Follow the instructions in the console window
 - Use /spamraid command in the channel to raid
+![External App Page](readmefiles/ExternalApp.png)
+![Bot Use Page](readmefiles/BotUse.png)
 
 
 ## License
