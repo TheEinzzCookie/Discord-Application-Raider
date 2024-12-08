@@ -45,10 +45,10 @@ def load_template(filename):
         return json.load(file)
 
 # Function to validate USER_ID and MESSAGE_AMOUNT
-def validate_inputs(user_id, message_amount):
+def validate_inputs(message_amount):
     # Check if USER_ID is numeric
-    if not user_id.isdigit():
-        raise ValueError("USER_ID must contain only numbers.")
+    #if not user_id.isdigit():
+    #    raise ValueError("USER_ID must contain only numbers.")
     
     # Check if MESSAGE_AMOUNT is between 1 and 5
     if message_amount not in [1, 2, 3, 4, 5]:
@@ -56,20 +56,20 @@ def validate_inputs(user_id, message_amount):
 
 # Initialize variables
 TOKEN = None
-USER_ID = None
+#USER_ID = None
 MESSAGE_AMOUNT = None
 final_message = None
 
 # Function to get user input with validation
 def get_user_input():
-    global TOKEN, USER_ID, MESSAGE_AMOUNT, final_message
+    global TOKEN, MESSAGE_AMOUNT, final_message
     
     while True:
         TOKEN = input("    Input your bot's token: ")
-        USER_ID = input("    Input your user id: ")
+        #USER_ID = input("    Input your user id: ")
         try:
             MESSAGE_AMOUNT = int(input("    Input the amount of messages to send per command (1-5): "))  # Convert to int
-            validate_inputs(USER_ID, MESSAGE_AMOUNT)
+            validate_inputs(MESSAGE_AMOUNT)
             break  # Exit loop if inputs are valid
         except ValueError as ve:
             print(ve)
@@ -86,7 +86,7 @@ if os.path.exists(filename):
     if use_last_template.lower() == 'yes':
         template_data = load_template(filename)
         TOKEN = template_data['TOKEN']
-        USER_ID = template_data['USER_ID']
+        #USER_ID = template_data['USER_ID']
         MESSAGE_AMOUNT = int(template_data['MESSAGE_AMOUNT'])
         final_message = template_data['final_message']
         print("    Loaded last template:")
@@ -99,7 +99,6 @@ else:
 # Save the new input to the JSON file
 data_to_save = {
     'TOKEN': TOKEN,
-    'USER_ID': USER_ID,
     'MESSAGE_AMOUNT': MESSAGE_AMOUNT,
     'final_message': final_message,
 }
@@ -149,7 +148,7 @@ async def send(interaction: discord.Interaction):
                 await interaction.followup.send(final_message)
 
                 # Optional: Add a delay to respect rate limits
-                await asyncio.sleep(0.2)  # Adjust the delay as needed (ratelimit)
+                await asyncio.sleep(0.02)  # Adjust the delay as needed (ratelimit)
 
         else:
             await interaction.response.send_message(
