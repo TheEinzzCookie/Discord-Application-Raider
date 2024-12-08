@@ -16,6 +16,7 @@
 ![Information Page](readmefiles/InformationPage.png)
 ![Installation Page](readmefiles/InstallationPage.png)
 ![Bot Page](readmefiles/BotPage.png)
+- You can already see the Token-Part, save it somewhere since it's needed later
 ![Add Bot Page](readmefiles/AddBot.png)
 ![Add to Apps Page](readmefiles/AddToOwnApps.png)
 ![Success Page](readmefiles/AddSuccess.png)
