@@ -5,6 +5,7 @@ import json
 import time
 import asyncio
 from colorama import init, Fore, Style
+import random
 init(autoreset=True)
 def status():
     print(Fore.GREEN + "    Status: Running    ")
@@ -38,15 +39,15 @@ def get_user_input():
     while True:
         TOKEN = input("    Input your bot's token: ")
         try:
-            MESSAGE_AMOUNT = int(input("    Input the amount of messages to send per command (1-5): "))  # Convert to int
+            MESSAGE_AMOUNT = int(input("    Input the amount of messages to send per command (1-5): "))
             validate_inputs(MESSAGE_AMOUNT)
-            break  # Exit loop if inputs are valid
+            break
         except ValueError as ve:
             print(ve)
-    print("    Input your raid message (separate messages with a semicolon ';' and press Enter when done):")
+    print("    Input your raid messages (separate messages with a semicolon ';' and press Enter when done):")
     user_input = input()
     RAID_MESSAGE = [msg.strip() for msg in user_input.split(';')]
-    final_message = "\n".join(RAID_MESSAGE)
+    final_message = RAID_MESSAGE
     print("    New template saved successfully.")
 if os.path.exists(filename):
     use_last_template = input(Fore.CYAN + "    A previous template exists. Do you want to use the last template? (yes/no): ")
@@ -95,13 +96,13 @@ async def send(interaction: discord.Interaction):
             interaction.channel.permissions_for(interaction.guild.me).send_messages):
             await interaction.response.send_message("Sending message...", ephemeral=True)
             for _ in range(MESSAGE_AMOUNT):
-                await interaction.followup.send(final_message)
+                message_to_send = random.choice(final_message)
+                await interaction.followup.send(message_to_send)
                 await asyncio.sleep(0.02)
         else:
             await interaction.response.send_message(
                 "I don't have permission to send messages in this channel!", 
-                ephemeral=True
-            )
+                ephemeral=True)
     except Exception as e:
         if not interaction.response.is_done():
             await interaction.response.send_message(f"Error: {str(e)}", ephemeral=True)
