@@ -24,6 +24,8 @@ def logo():
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear')
 clear()
+
+# Soon Token switcher...
 filename = 'raid_template.json'
 def load_template(filename):
     with open(filename, 'r') as file:
