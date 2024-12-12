@@ -1,5 +1,5 @@
 # Discord-Application-Raider
-
+![Logo](readmefiles/Logo.png)
 ### A discord raider to spam channels using a Discord Application.
 
 <br>
