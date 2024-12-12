@@ -43,4 +43,4 @@
 ![Result3](readmefiles/Result3.png)
 
 ## License
-### [MIT](https://choosealicense.com/licenses/mit/) 
+### ![License](LICENSE) 
