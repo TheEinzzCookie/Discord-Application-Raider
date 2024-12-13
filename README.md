@@ -1,7 +1,7 @@
 # Discord-Application-Raider
 ![Logo](readmefiles/Logo_small.png)
 ### A discord raider to spam channels using a Discord Application.
-# Create the application on an alt account. Do NOT use your main account!
+#### Create the application on an alt account. Do NOT use your main account!
 
 <br>
 
