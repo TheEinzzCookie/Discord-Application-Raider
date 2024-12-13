@@ -41,6 +41,9 @@
 ![Result1](readmefiles/Result1.png)
 ![Result2](readmefiles/Result2.png)
 ![Result3](readmefiles/Result3.png)
+![Result4](readmefiles/Result4.png)
+![Result5](readmefiles/Result5.png)
+![Result6](readmefiles/Result6.png)
 
 ## License
 ### ![License](LICENSE) 
